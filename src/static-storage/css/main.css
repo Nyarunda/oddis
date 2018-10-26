@@ -1,0 +1,313 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('fonts/poppins/Poppins-Regular.ttf'); 
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+body, html {
+  height: 100%;
+  font-family: Poppins-Regular, sans-serif;
+}
+html{
+  line-height: 1.4;
+	font-weight: 400;
+	height: 100%;
+  font-family: Poppins-Regular, sans-serif;
+}
+body{
+  height: 100%;
+  font-family: Poppins-Regular, sans-serif;
+  color: #333;
+  margin-top: 50px;
+  background-color: #f2f2f2;
+}
+.siteHeader{
+  background: #fff;
+  box-shadow: 0 3px 2px -2px rgba(200,200,200,0.2);
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  height: 50px;
+  font-size: 14px;
+}
+.collapseHeader .header_nav{
+  float: none;
+  padding: 0 8px;
+  display: table-cell;
+  position: relative;
+  z-index: 1;
+  color: #66757f;
+}
+.collapseHeader .header_nav .returnHome:hover{
+  background-color: #fff2e6;
+}
+.collapseHeader .header_nav .navbar-nav  .nav-item{
+  display: table-cell;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.collapseHeader .header_nav .navbar-nav .selected{
+  border-color: #b92b27;
+  font-size: 15px;
+  font-weight: 600;
+}
+.collapseHeader .header_nav .active >.nav-link{
+  color: #cc6600;
+} 
+.collapseHeader .header_nav .fa{
+  padding: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 23px;
+  height: 23px;
+}
+div .right_content_nav{
+  margin-left: 900px;
+}
+
+placeholder{
+    text-indent:102;
+}
+/*feeds for user styling remmember user-posts also*/
+.allposts{
+  margin-top: 30px;
+}
+.ui-block{
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e6ecf5;
+  margin-bottom: 15px;
+  margin-left: -20px;
+}
+.q-wid{
+  width: 59%;
+}
+div#v-pills-tab a {
+  border-radius: 0;
+  color: #666;
+  font-size: 13px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #666 !important;
+  background-color: #e6e6e6 !important;
+}
+.nav-pills .nav-link:hover{
+  background: #edf2f6;
+}
+h6.my-4 {
+  margin: 13px;
+}
+/*Feed Ask Sports Form Styling*/
+.siteContainer .askSports{
+  margin-top: 33px;
+  height: 100px;
+  border: none;
+  margin-bottom: 0;
+}
+.askSports .form_group_div .sports_post_form{
+  /*margin-bottom: 100px;*/
+}
+
+
+/*User navbar profile styling*/
+
+
+.avatar-profile img {
+  width: 35px;
+  height: 36px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+/*User post container styling*/
+.post {
+  position: relative;
+  padding: 25px;
+  border-bottom: 1px solid #e6ecf5;
+}
+.m-link a {
+  color: #333;
+}
+.m-link a:hover {
+  color: #333;
+}
+.m-link h4 {
+  font-weight: bold;
+}
+.post-additional-info {
+  padding: 20px 0 0;
+  border-top: 1px solid #e6ecf5;
+}
+.post-additional-info > * {
+  margin-right: 15px;
+}
+.post-additional-info .social-icons{
+  float:right;
+}
+/*Buttons styling*/
+.nav_post_btn{
+
+}
+.nav_post_btn .buttonPost{
+  background-color: #cc6600;
+  border-color: #cc6600;
+  height: 35px;
+  margin-top: 3px;
+}
+.sports_post_form .btn-submit{
+  background-color: #cc6600;
+  border-color: #cc6600;
+  margin-top: 5px;
+}
+button.btn.btn-light {
+  position: absolute;
+  background: transparent;
+  border:none;
+  height: 38px;
+}
+.btn-light .fa_search{
+  color: gray;
+  margin-top: 3px;
+}
+.post_sports {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 470px;
+}
+
+/*Ask sports question form*/
+.askSports{
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #e6ecf5;
+  margin-left: -20px;
+}
+.form_group_div{
+  border: 1px solid #e6ecf0;
+  height: 50px;
+  border: none;
+}
+.sports_post_form{
+  border-color: #000;
+  
+}
+.sports_post_form .form_group_div .post_sports{
+  display: flex;
+
+}
+/*Search form css*/
+.collapseHeader .my-2{
+  margin-left: 15px;
+}
+.search-form{
+  width: 385px;
+  margin-left: -165px;
+}
+.myform-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  text-indent: 22px;
+}
+input[type=text], textarea {
+  outline-color: #cc6600;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #cc6600;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #fff;
+}
+/*Modal styling*/
+.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-backdrop .fade .in {
+  opacity: 0.5 !important;
+}
+
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
+}
+.modal{
+  -webkit-transition: 0.5s;
+  overflow: auto;
+  transition: all 0.3s linear;
+}
+.modal-content{
+  position: relative;
+  background-color: #fff;
+  border-radius: 6px;
+  background-clip: padding-box;;
+}
+.post__author {
+margin-bottom: 20px;
+}
+.post__author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%; 
+  overflow: hidden;
+  margin-right: 12px;
+  }
+.inline-items > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.post .author-date a {
+  font-weight: 700;
+}
+.post__author .more {
+  float: right;
+  font-size: 16px;
+  margin-right: 20px;
+}
+h6.my-4 {
+margin: 13px;
+}
+.modalbody{
+  background-color: #fff2e6;
+}
+.modal-footer{
+  background-color: #fff2e6;
+}
+
+/*Register form*/
+div .col-sm-12 .col-md-6 .registerCol{
+  margin-left: 20%;
+  transition: 50%;
+}
+/*Media styling*/
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1201px !important;
+  }
+}
+@media screen and (max-width: 559px){
+  .siteHeaader{
+  width:90%;
+  }

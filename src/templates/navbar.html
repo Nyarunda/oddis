@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top siteHeader">
+  <div class="container siteLogo" style="margin-right: 0px;">
+    <a class="navbar-brand" href="/">ODDIS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse collapseHeader" id="navbarSupportedContent">
+      {% if request.user.is_authenticated %}
+        <div class="header_nav" role="navigation">
+          <ul class="navbar-nav mr-auto selected">
+            <li class="nav-item active returnHome">
+              <a class="nav-link " href="/"><i class="fa fa-home" aria-hidden="true"></i>Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item siteCommNavItem">
+              <a class="nav-link" href="#"><span><i class="fa fa-comments-o" aria-hidden="true"></i></span>Comment</a>
+            </li>
+            <li class="nav-item siteNotfyNavItem">
+              <a class="nav-link" href="#"><i class="fa fa-bell"></i>Notivications</a>
+            </li>
+          </ul>
+        </div>
+
+        {% include "SportsPost/search_form.html" %}
+        <div class="right_content">
+          <ul class="nav navbar-nav mr-auto">
+            <li class="avatar-profile d-none d-sm-block ">
+              <a href="#" ><img src="" class="img-responsive" />
+              </a>
+           </li>
+            <li class="nav-item nav_post_btn">
+              <a class="nav-link" href="#"><button type="submit" class="btn btn-primary buttonPost" data-toggle="modal" data-targrt="replyId" >Ask Sports Topic</button></a>
+            </li>
+          </ul>
+        </div>
+      {% else %}
+      <div class="right_content_nav">
+        <div class="justify">
+           <ul class="nav navbar-nav ml-2-auto">
+              <li class="nav-item nav_post_btn">
+                <a class="nav-link" href="#"><button type="submit" class="btn btn-primary buttonPost" data-toggle="modal" data-targrt="replyId" >Register</button></a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</nav>  

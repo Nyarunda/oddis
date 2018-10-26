@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load recommended %}
+{% block script %}  
+
+<script>
+	$(document).ready(function(){
+
+		loadSportpostContainer("sports-container")
+
+	});
+</script>
+
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-lg-2 col-xs-12" >
+			<div class=" aff-right">
+               <div class="ui-block">
+	               	<div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link" data-toggle="pill" href="#" >{{ object.username }}</a>
+						<p>Followers: {{ object.followed_by.all.count }} </p>
+						<p>
+							<a class="btn btn-link" href="{{ object.profile.get_follow_url }}">{% if following %}unfollow{% else %}Follow{% endif %}</a>
+						</p>
+						<hr/>
+						<h6 class="my-4 text-center">Not Following users</h6>
+						{% for user in object.profile.get_following %}
+
+							<a href='/{{ user.username }}'>{{ user.username }}</a><br/>
+
+						{% empty %}
+							<h5></h5>
+							<h6 class="my-4 text-center">Not Following users</h6> 
+						{% endfor %}
+
+						<hr/>
+						<h6 class="my-4 text-center">Followed By</h6> 
+						{% for profile in object.followed_by.all %}
+							<a href='/{{ profile.user.username }}'>{{ profile.user.username }}</a><br/>
+						{% empty %}
+							<h5>No Followers </h5>
+						{% endfor %}
+						<h6 class="my-4 text-center">Recommended users</h6>
+							{% recommended request.user %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-6 col-xs-12">
+			<div class="ui-block allposts">
+			  	<article class="hentry post">
+					<h6 class="my-4 text-center">Your Sports Post</h6>
+					<div id="sports-container" data-url='/api/{{ object.username }}/qspost/'>
+
+					</div>
+					<a href="#" id="loadmore">Load more...</a>
+				</article>
+			</div>
+		</div>
+		
+		<div class="col-lg-3">
+            <div class="q-wid">
+               <div class="ui-block">
+                  <h6 class="my-4 text-center">Today's Odds</h6>
+                  <hr>
+                  <div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab"  aria-orientation="vertical">
+                  </div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

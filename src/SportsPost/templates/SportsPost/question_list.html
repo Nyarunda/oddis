@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+ <style>
+ 	 
+	#sports-container{
+
+	}
+</style>>
+{% block script %}  
+
+<script>
+	$(document).ready(function(){
+
+		loadSportpostContainer("sports-container")
+
+	});
+</script>
+
+{% endblock %}
+
+{% block content %}
+ 
+		<div class="col-lg-2 col-xs-12">
+			<div class=" aff-right">
+               <div class="ui-block">
+                  <h6 class="my-4 text-center">Feeds</h6>
+                  <hr>
+                  <div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                     <a class="nav-link active" data-toggle="pill" href="#"> Top Stories</a>
+                     <a class="nav-link" data-toggle="pill" href="#" >{{ request.user }}</a>
+                     <a class="nav-link" data-toggle="pill" href="#">Bookmarked Answers</a>
+                     <a class="nav-link" data-toggle="pill" href="#">Links</a>
+                     <a class="nav-link" data-toggle="pill" href="#">Payment Gateways</a>
+                     <a class="nav-link" data-toggle="pill" href="#" >Education</a>
+                     <a class="nav-link" data-toggle="pill" href="#">E-commerce</a>
+                     <a class="nav-link" data-toggle="pill" href="#">Android Applications</a>
+                  </div>
+               </div>
+            </div>
+		</div>	
+		<div class="col-lg-6 col-xs-12">
+			{% if not request.GET.q %}
+			  		<div class="askSports">
+						{% include "SportsPost/form.html" with form=create_form action_url=create_url btn_title="Ask Sports" form_class="sports-form" %}
+					</div>
+			  	{% endif %}
+			  	<div class="ui-block allposts">
+			  		<article class="hentry post">
+						<div id="sports-container" data-url='/api/qspost/'>
+
+						</div>
+					</article>
+				</div>
+				<a href="#" id="loadmore">Load more...</a>
+		</div>
+
+		  <!--col-lg-3-->
+         <div class="col-lg-3">
+            <div class="q-wid">
+               <div class="ui-block">
+                  <h6 class="my-4 text-center">Today's Odds</h6>
+                  <hr>
+                  <div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab"  aria-orientation="vertical">
+                     <a class="nav-link"  data-toggle="pill" href="#">  Manchester win </a>
+                     <a class="nav-link"  data-toggle="pill" href="#">  Manchester win </a>
+                     <a class="nav-link" data-toggle="pill" href="#">  Manchester win </a>
+                     <a class="nav-link" data-toggle="pill" href="#"> Manchester win </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /.col-lg-3 -->
+{% endblock content %}

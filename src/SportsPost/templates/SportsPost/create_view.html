@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+ {% block title %} Ask Sports | {{ block.super }} {% endblock title %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			{% include "SportsPost/form.html" with form=form btn_title='Ask sports' %}
+		</div>
+	</div>
+{% endblock %}

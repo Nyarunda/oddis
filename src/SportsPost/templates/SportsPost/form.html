@@ -1,0 +1,10 @@
+{% load crispy_forms_tags %}
+<div class="form-group form_group_div">
+	<form class="form sports_post_form {% if form_class %} {{ form_class }} {% endif %} " method="POST" action="{% if action_url %} {{ action_url }} {% endif %}" >
+		{% csrf_token %}
+		{{ form|crispy }}
+		<span class="post_sports">
+			<input class='btn btn-primary btn-submit' type="submit"  value="{{ btn_title }}">
+		</span>
+	</form>
+</div>

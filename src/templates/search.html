@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+ <style>
+ 	 
+	#sports-container{
+
+	}
+</style>>
+{% block script %}  
+
+<script>
+	$(document).ready(function(){
+
+		loadSportpostContainer("sports-container")
+
+	});
+</script>
+
+{% endblock %}
+
+{% block content %}
+ 
+	<div class="row">	
+		<div class="col-sm-12">
+			{% if not request.GET.q %}
+				<p class="lead">Result for {{ request.GET.q }}</p>
+				<hr/>
+			{% endif %}
+		</div>	
+		<div class="col-sm-2 col-xs-12">
+			<h5>Users</h5>
+			<hr/>
+			{% for user in users %}
+				<a href='/{{ user.username }}/'>{{ user.username }}</a><br/>
+			{% endfor %}
+		</div>	
+		<div class="col-sm-8">
+			<h4>Sports</h4>
+			<hr/>			  	
+			<div id="sports-container" data-url='/api/search/'>
+
+			</div>
+			<a href="#" id="loadmore">Load more...</a>
+		</div>
+		<div class="col-sm-2 col-xs-12">
+			<h5>Users</h5>
+			<hr/>
+			{% for user in users %}
+				<a href='/{{ user.username }}/'>{{ user.username }}</a><br/>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock content %}

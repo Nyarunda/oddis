@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block script %}  
+
+<script>
+	$(document).ready(function(){
+
+		loadSportpostContainer("sports-container", {{ object.id }})
+
+	});
+</script>
+
+{% endblock script %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-sm-3 col-xs-9">
+				{{ object.user }}
+		</div>
+		<div class="col-sm-6 col-xs-9">
+			<div id="sports-container">
+				
+			</div>
+		</div>
+		<div class="col-sm-3 col-xs-9">
+				{{ object.user }}
+		</div>
+	</div>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+ {% block title %} Register | {{ block.super }} {% endblock title %}
+
+{% block content %}
+	<div class="m-auto registerCol container-login100">
+		<div class="wrap-login100 wrap-register100">
+			<span class="login100-form-title p-b-26">
+				<h1>Register</h1>
+			</span>
+			<form class="form login100-form validate-form {% if form_class %} {{ form_class }} {% endif %} " method="POST" action="{% if action_url %} {{ action_url }} {% endif %}" >
+				{% csrf_token %}
+				{{ form|crispy }}
+				<span class="register_span_btn">
+					<input class='btn btn-primary register_btn' type="submit"  value="Register">
+				</span>
+			</form>
+		</div>
+	</div>
+{% endblock %}

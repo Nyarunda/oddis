@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+	<div class="row">			
+		<div class="col-sm-2 col-xs-12">
+				{{ obj.tag }}
+		</div>	
+		<div class="col-sm-6">
+
+			{% for question in obj.get_questions %}
+				{{ question.content }}
+			{% endfor %}
+
+		</div>
+	</div>
+{% endblock content %}
